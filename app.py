@@ -38,14 +38,19 @@ def load_trained_model():
 
 @st.cache_data
 def load_raw_data():
-    """Loads and preprocesses the raw data for visualizations."""
-    DATA_PATH = 'data/city_day.csv'
+    """
+    Loads and preprocesses the raw data for visualizations.
+    Now loads from a Google Drive direct download URL.
+    """
+    # Corrected direct download URL for the 'city_day.csv' file from Google Drive
+    DATA_URL = 'https://drive.google.com/uc?export=download&id=1JeIE-vRFucoqneMnfvpdSWuVuSNAH3ls'
     try:
-        df = pd.read_csv(DATA_PATH)
+        # Use the direct download URL with pandas
+        df = pd.read_csv(DATA_URL)
         df['Date'] = pd.to_datetime(df['Date'])
         return df
-    except FileNotFoundError:
-        st.error(f"Error: Data not found at '{DATA_PATH}'. Please download the dataset.")
+    except Exception as e:
+        st.error(f"Error loading data from Google Drive: {e}. Please ensure the file is public and the link is correct.")
         return None
 
 # --- Main App ---
