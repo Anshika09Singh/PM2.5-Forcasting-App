@@ -40,5 +40,5 @@ It provides:
 
 ---
 
-## 📂 Project Structure  
+ 
 
