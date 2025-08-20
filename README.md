@@ -19,15 +19,6 @@ It provides:
 
 ---
 
-## 🎥 Demo (Animated Preview)  
-
-✨ Here's a sneak peek of the dashboard in action:  
-
-![Dashboard Demo](assets/dashboard_demo.gif)  
-
-*(Record your screen with [ScreenToGif](https://www.screentogif.com/) or [Loom](https://loom.com), save it inside `assets/`, and link here.)*  
-
----
 
 ## 🖥️ Features  
 
